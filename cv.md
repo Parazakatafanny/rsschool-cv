@@ -21,36 +21,21 @@ I am 22 years old, the current goal in life is self-realization. I have been in 
 * Adobe Photoshop, Adobe Lightroom, Davinci, ZBrush
 
 ## *Code Examples*
+*Given an integer number n, return the difference between the product of its digits and the sum of its digits.*
 
 ```
-function renderPages() {
-        let totalPages = totalValues / pageSize;
-        
-        for (let i = 1; i <= totalPages; i++) {
-            let numberPage = document.createElement('span')
-            numberPage.classList.add('numberPage')
-            numberPage.innerHTML = i;
-            let page = document.createElement('span')
-                page.classList.add('page')
-                blogPages.appendChild(page)
-            if (!(i == 1 || i == totalPages + 1)){
-                page.innerHTML = ' '
-            } 
-            page.appendChild(numberPage)
-            
-            numberPage.addEventListener('click', () => {
-                blog.innerHTML = ''
-                currentPage = (i - 1) * pageSize;
-
-                fetch(`${URL}/posts?_start=${currentPage}&_limit=${pageSize}`)
-                    .then(response => response.json())
-                    .then((data) => {
-                        fetchComments(data)
-                        .then(() => {renderBlogPosts(data);})
-                    })
-            })
-        }
+var subtractProductAndSum = function(n) {
+    let sum = 0
+    let digitsProduct = 1
+    let element = null
+    n = n.toString();
+    for (let i = 0; i < n.length; i++) {
+        element = parseInt(n[i]);
+        sum = sum + element
+        digitsProduct = digitsProduct * element
     }
+    return digitsProduct - sum
+};
 ```
 ## *Education*
 
