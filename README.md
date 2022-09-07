@@ -1,1 +1,1 @@
-# rsschool-cv
+https://parazakatafanny.github.io/rsschool-cv/

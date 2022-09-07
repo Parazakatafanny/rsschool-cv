@@ -1,0 +1,35 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #666;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contacts__foto {
+    padding: 10px 0 20px;
+}
+
+.foto {
+    width: 300px;
+    border-radius: 100px;
+}
+
+.contacts {
+    display: flex;
+}
+
+.contact__title {
+    font-size: 36px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.contacts__inner {
+    padding: 10px 20px;
+    line-height: 1.5;
+}
